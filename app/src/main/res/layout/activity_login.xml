@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="60dp">
+
+    <!-- ImageView para el logo -->
+    <ImageView
+        android:id="@+id/logoTaskMaster"
+        android:layout_width="192dp"
+        android:layout_height="109dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/logo_task_master"
+        android:contentDescription="@string/logo_description" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="293dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/logoTaskMaster"
+        android:layout_marginBottom="60dp"
+        android:autofillHints="username"
+        android:hint="@string/nombre_de_usuario"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="289dp"
+        android:layout_height="61dp"
+        android:layout_below="@id/editTextUsername"
+        android:layout_marginBottom="60dp"
+        android:autofillHints="password"
+        android:hint="@string/contraseña"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:text="@string/iniciar_sesion"
+        android:textColor="@color/orange_1"
+        android:background="@color/teal_200"/>
+
+</RelativeLayout>
+
+
+
+

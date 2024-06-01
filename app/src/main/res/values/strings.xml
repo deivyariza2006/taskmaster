@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Task Master</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="logo_description">Logo de Task Master</string>
+    <string name="bienvenido">Bienvenido a la pantalla de inicio</string>
+    <string name="nav_task">Task</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Task Description</string>
+    <string name="add_task_screen">Add Task Screen</string>
+    <string name="add_task">Add Task</string>
+    <string name="dashboard">Dashboard</string>
+
+        <string name="task_title_hint">Enter task title</string>
+        <string name="task_description_hint">Enter task description</string>
+        <string name="add_task_button">Add Task</string>
+
+
+
+    </resources>
+
+
