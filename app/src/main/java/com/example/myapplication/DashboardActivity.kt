@@ -1,5 +1,6 @@
-package com.example.myapplication
 
+package com.example.myapplication
+import TaskAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -20,12 +21,16 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        // Recuperar la lista de tareas guardadas
+
         taskList = loadTasks()
 
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        taskAdapter = TaskAdapter(taskList)
+        taskAdapter = TaskAdapter(taskList) { position ->
+            taskList.removeAt(position)
+            taskAdapter.notifyItemRemoved(position)
+            saveTasks(taskList)
+        }
         recyclerView.adapter = taskAdapter
 
         navView = findViewById(R.id.nav_view)
@@ -45,6 +50,15 @@ class DashboardActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    private fun saveTasks(taskList: MutableList<Task>) {
+        val sharedPreferences = getSharedPreferences("tasks", MODE_PRIVATE)
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+        val gson = Gson()
+        val json = gson.toJson(taskList)
+        editor.putString("task_List", json)
+        editor.apply()
     }
 
     private fun loadTasks(): MutableList<Task> {

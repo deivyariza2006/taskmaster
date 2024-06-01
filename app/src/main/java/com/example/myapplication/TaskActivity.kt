@@ -25,7 +25,7 @@ class TaskActivity : AppCompatActivity() {
         taskDescriptionEditText = findViewById(R.id.edit_task_description)
         addTaskButton = findViewById(R.id.add_task)
 
-        // Recuperar la lista de tareas guardadas
+
         taskList = loadTasks()
 
         addTaskButton.setOnClickListener {

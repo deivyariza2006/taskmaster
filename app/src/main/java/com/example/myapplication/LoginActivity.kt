@@ -25,13 +25,12 @@ class LoginActivity : AppCompatActivity() {
             val savedPassword = sharedPref.getString("password", "")
 
             if (username == savedUsername && password == savedPassword) {
-                // Navegar a HomeActivity después de iniciar sesión
+
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
-                // Mostrar un mensaje de error (opcional)
-                // Puedes usar un Toast, un Snackbar, o un TextView para mostrar un mensaje de error
+
             }
         }
     }
