@@ -14,15 +14,10 @@
     <string name="add_task_screen">Add Task Screen</string>
     <string name="add_task">Add Task</string>
     <string name="dashboard">Dashboard</string>
-
-        <string name="task_title_hint">Enter task title</string>
-        <string name="task_description_hint">Enter task description</string>
-        <string name="add_task_button">Add Task</string>
+    <string name="task_title_hint">Enter task title</string>
+    <string name="task_description_hint">Enter task description</string>
+    <string name="add_task_button">Add Task</string>
     <string name="delete_task">Delete Task</string>
     <string name="task_count">Tienes 0 tareas</string>
-
-
-
-    </resources>
-
-
+    <string name="set_alarm">Set Alarm</string>
+</resources>
