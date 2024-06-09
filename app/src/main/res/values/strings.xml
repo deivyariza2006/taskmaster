@@ -20,4 +20,5 @@
     <string name="delete_task">Delete Task</string>
     <string name="task_count">Tienes 0 tareas</string>
     <string name="set_alarm">Set Alarm</string>
+    <string name="news_icon_desc">News Icon</string>
 </resources>

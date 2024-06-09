@@ -2,11 +2,13 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.RelativeSizeSpan
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -40,6 +42,13 @@ class HomeActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+        val newsIcon: ImageView = findViewById(R.id.news_icon)
+        newsIcon.setOnClickListener {
+            val url = "https://micampusresidencias.com/como-organizar-tu-tiempo-de-estudio-en-la-universidad/"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
         }
     }
 
