@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Task Master</string>
-    <string name="registrarse">Registrarse</string>
-    <string name="contraseña">Contraseña</string>
-    <string name="nombre_de_usuario">Nombre de usuario</string>
-    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="registrarse">Sign Up</string>
+    <string name="contraseña">Password</string>
+    <string name="nombre_de_usuario">Username</string>
+    <string name="iniciar_sesion">Log In</string>
     <string name="logo_description">Logo de Task Master</string>
     <string name="bienvenido">Bienvenido a la pantalla de inicio</string>
     <string name="nav_task">Task</string>

@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
         val taskCountTextView: TextView = findViewById(R.id.task_count)
         taskCountTextView.text = formatTaskCountText(taskList.size)
 
-        // Configura el BottomNavigationView
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -65,7 +65,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun formatTaskCountText(taskCount: Int): CharSequence {
-        val spannable = SpannableString("Tienes $taskCount tareas")
+        val spannable = SpannableString("You have $taskCount tasks")
         val start = spannable.indexOf(taskCount.toString())
         val end = start + taskCount.toString().length
         spannable.setSpan(ForegroundColorSpan(Color.RED), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)

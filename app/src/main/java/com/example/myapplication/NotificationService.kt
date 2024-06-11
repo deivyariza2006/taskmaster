@@ -24,7 +24,6 @@ class NotificationService : Service() {
             notificationManager.createNotificationChannel(channel)
         }
 
-        // Crear un Intent para abrir DashboardActivity cuando se pinche la notificación
         val dashboardIntent = Intent(this, DashboardActivity::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
@@ -37,7 +36,7 @@ class NotificationService : Service() {
             .setContentText("Reminder for task: $taskTitle")
             .setSmallIcon(R.drawable.ic_notification)
             .setAutoCancel(true)
-            .setContentIntent(pendingIntent) // Asociar el PendingIntent con la notificación
+            .setContentIntent(pendingIntent)
             .build()
 
         notificationManager.notify(1, notification)

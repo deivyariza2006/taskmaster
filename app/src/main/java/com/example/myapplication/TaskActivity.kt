@@ -41,7 +41,7 @@ class TaskActivity : AppCompatActivity() {
             if (title.isNotEmpty() && description.isNotEmpty()) {
                 showDatePickerDialog(title, description)
             } else {
-                Toast.makeText(this, "Please enter both title and description", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter both the title and description", Toast.LENGTH_SHORT).show()
             }
         }
 

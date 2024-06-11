@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class SignUpActivity : AppCompatActivity() {
@@ -20,22 +21,29 @@ class SignUpActivity : AppCompatActivity() {
             val username = usernameEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            // Guardar datos de registro en SharedPreferences
+
+
             val sharedPref = getSharedPreferences("UserPref", Context.MODE_PRIVATE)
             with(sharedPref.edit()) {
                 putString("username", username)
                 putString("password", password)
                 putBoolean("isRegistered", true)
                 apply()
+
             }
 
-            // Navegar a LoginActivity después de registrarse
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            if (username.isNotEmpty() && password.isNotEmpty()) {
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish() }
+                else {
+                    Toast.makeText(this, "Neither the username nor the password can be empty", Toast.LENGTH_SHORT).show()
+                }
+            }
+
         }
     }
-}
+
 
 
 
